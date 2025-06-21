@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Books Library - NCERT | State Board | ICSE</title>
+  <style>
+    body {
+      background-color: #1e1e1e;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: white;
+    }
+    button {
+      margin: 10px;
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #0066cc;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0052a3;
+    }
+    iframe {
+      width: 95%;
+      height: 1000px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    .section {
+      display: none;
+    }
+  </style>
+  <script>
+    function showBoard(id) {
+      document.getElementById("ncert").style.display = "none";
+      document.getElementById("stateboard").style.display = "none";
+      document.getElementById("icse").style.display = "none";
+      document.getElementById(id).style.display = "block";
+    }
+  </script>
+</head>
+<body>
+
+  <h1>📚 Book Library Viewer</h1>
+  <button onclick="showBoard('ncert')">📘 NCERT</button>
+  <button onclick="showBoard('stateboard')">📗 State Board</button>
+  <button onclick="showBoard('icse')">📙 ICSE</button>
+
+  <div id="ncert" class="section">
+    <iframe src="ncert.html"></iframe>
+  </div>
+
+  <div id="stateboard" class="section">
+    <iframe src="stateboard.html"></iframe>
+  </div>
+
+  <div id="icse" class="section">
+    <iframe src="icse.html"></iframe>
+  </div>
+
+</body>
+</html>
